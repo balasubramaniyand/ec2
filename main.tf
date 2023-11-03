@@ -21,3 +21,5 @@ resource "aws_instance" "web" {
   tags = {
     "Name" = "web-3"
   }
+}
+
