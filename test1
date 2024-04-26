@@ -1,0 +1,26 @@
+2024.04.26 13:52:30 INFO  es[][o.e.i.r.RecoverySettings] using rate limit [40mb] with [default=40mb, read=0b, write=0b, max=0b]
+2024.04.26 13:52:30 INFO  es[][o.e.d.DiscoveryModule] using discovery type [single-node] and seed hosts providers [settings]
+2024.04.26 13:52:30 INFO  es[][o.e.n.Node] initialized
+2024.04.26 13:52:30 INFO  es[][o.e.n.Node] starting ...
+2024.04.26 13:52:30 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:44961}, bound_addresses {127.0.0.1:44961}
+2024.04.26 13:52:30 INFO  es[][o.e.b.BootstrapChecks] explicitly enforcing bootstrap checks
+2024.04.26 13:52:30 ERROR es[][o.e.b.Elasticsearch] node validation exception
+[1] bootstrap checks failed. You must address the points described in the following [1] lines before starting Elasticsearch. For more information see [https://www.elastic.co/guide/en/elasticsearch/reference/8.11/bootstrap-checks.html]
+bootstrap check failure [1] of [1]: max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]; for more information see [https://www.elastic.co/guide/en/elasticsearch/reference/8.11/_maximum_map_count_check.html]
+2024.04.26 13:52:30 WARN  es[][o.e.n.Node] unexpected exception while waiting for http server to close
+java.util.concurrent.ExecutionException: java.lang.IllegalStateException: Can't move to stopped state when not started
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at org.elasticsearch.node.Node.prepareForClose(Node.java:1776) ~[elasticsearch-8.11.0.jar:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.shutdown(Elasticsearch.java:468) ~[elasticsearch-8.11.0.jar:?]
+	at java.lang.Thread.run(Thread.java:840) ~[?:?]
+Caused by: java.lang.IllegalStateException: Can't move to stopped state when not started
+	at org.elasticsearch.common.component.Lifecycle.canMoveToStopped(Lifecycle.java:128) ~[elasticsearch-8.11.0.jar:?]
+	at org.elasticsearch.common.component.AbstractLifecycleComponent.stop(AbstractLifecycleComponent.java:73) ~[elasticsearch-8.11.0.jar:?]
+	at org.elasticsearch.node.Node.lambda$prepareForClose$59(Node.java:1768) ~[elasticsearch-8.11.0.jar:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	... 1 more
+2024.04.26 13:52:30 INFO  es[][o.e.n.Node] stopping ...
+2024.04.26 13:52:30 INFO  es[][o.e.n.Node] stopped
+2024.04.26 13:52:30 INFO  es[][o.e.n.Node] closing ...
+2024.04.26 13:52:30 INFO  es[][o.e.n.Node] closed
