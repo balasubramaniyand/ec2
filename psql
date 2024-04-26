@@ -1,0 +1,6 @@
+balasubramaniyand@CHNIOPEXL5097:/opt$ sudo su - postgres
+postgres@CHNIOPEXL5097:~$ createuser sonar
+postgres@CHNIOPEXL5097:~$ createuser sonar;
+createuser: error: creation of new role failed: ERROR:  role "sonar" already exists
+postgres@CHNIOPEXL5097:~$ 
+
