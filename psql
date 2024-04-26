@@ -1,6 +1,13 @@
-balasubramaniyand@CHNIOPEXL5097:/opt$ sudo su - postgres
-postgres@CHNIOPEXL5097:~$ createuser sonar
-postgres@CHNIOPEXL5097:~$ createuser sonar;
-createuser: error: creation of new role failed: ERROR:  role "sonar" already exists
-postgres@CHNIOPEXL5097:~$ 
+ostgres@CHNIOPEXL5097:~$ psql
+psql (16.2 (Ubuntu 16.2-1.pgdg22.04+1), server 14.11 (Ubuntu 14.11-0ubuntu0.22.04.1))
+Type "help" for help.
 
+postgres=# ALTER USER sonar WITH ENCRYPTED password 'sonar';
+ALTER ROLE
+postgres=# CREATE DATABASE sonarqube OWNER sonar;
+CREATE DATABASE
+postgres=# GRANT ALL PRVILEGES ON DATABASE sonarqube to sonar;
+ERROR:  syntax error at or near "PRVILEGES"
+LINE 1: GRANT ALL PRVILEGES ON DATABASE sonarqube to sonar;
+                  ^
+postgres=# 
