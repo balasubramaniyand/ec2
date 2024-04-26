@@ -1,7 +1,11 @@
-2024.04.26 12:57:10 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /opt/sonarqube/temp
-2024.04.26 12:57:10 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on [HTTP: 127.0.0.1:9001, TCP: 127.0.0.1:35353]
-2024.04.26 12:57:10 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[ELASTICSEARCH] from [/opt/sonarqube/elasticsearch]: /opt/sonarqube/elasticsearch/bin/elasticsearch
-2024.04.26 12:57:10 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
-2024.04.26 12:57:10 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [ElasticSearch]: 1
-2024.04.26 12:57:10 INFO  app[][o.s.a.SchedulerImpl] Process[ElasticSearch] is stopped
-2024.04.26 12:57:10 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+2024.04.26 13:51:41 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [ElasticSearch]: 78
+2024.04.26 13:51:41 INFO  app[][o.s.a.SchedulerImpl] Process[ElasticSearch] is stopped
+2024.04.26 13:51:41 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+2024.04.26 13:52:24 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /opt/sonarqube-10.5.0.89998/temp
+2024.04.26 13:52:24 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on [HTTP: 127.0.0.1:9001, TCP: 127.0.0.1:44961]
+2024.04.26 13:52:24 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[ELASTICSEARCH] from [/opt/sonarqube-10.5.0.89998/elasticsearch]: /usr/lib/jvm/java-17-openjdk-amd64/bin/java -Xms4m -Xmx64m -XX:+UseSerialGC -Dcli.name=server -Dcli.script=./bin/elasticsearch -Dcli.libs=lib/tools/server-cli -Des.path.home=/opt/sonarqube-10.5.0.89998/elasticsearch -Des.path.conf=/opt/sonarqube-10.5.0.89998/temp/conf/es -Des.distribution.type=tar -cp /opt/sonarqube-10.5.0.89998/elasticsearch/lib/*:/opt/sonarqube-10.5.0.89998/elasticsearch/lib/cli-launcher/* org.elasticsearch.launcher.CliToolLauncher
+2024.04.26 13:52:24 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+2024.04.26 13:52:30 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [ElasticSearch]: 78
+2024.04.26 13:52:30 INFO  app[][o.s.a.SchedulerImpl] Process[ElasticSearch] is stopped
+2024.04.26 13:52:30 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+balasubramaniyand@CHNIOPEXL5097:/opt/sonarqube-10.5.0.89998/logs$ 
