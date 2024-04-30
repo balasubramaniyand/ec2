@@ -1,6 +1,15 @@
-balasubramaniyand@CHNIOPEXL5097:/opt/bala$ git add .
-fatal: detected dubious ownership in repository at '/opt/bala'
-To add an exception for this directory, call:
-
-	git config --global --add safe.directory /opt/bala
+balasubramaniyand@CHNIOPEXL5097:/opt/bala$ sudo git push -uf origin main
+Username for 'https://pexcode.growipx.com': balasubramaniyan.d
+Password for 'https://balasubramaniyan.d@pexcode.growipx.com': 
+Enumerating objects: 27, done.
+Counting objects: 100% (27/27), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (24/24), done.
+Writing objects: 100% (27/27), 36.69 MiB | 6.49 MiB/s, done.
+Total 27 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: GitLab: You are not allowed to force push code to a protected branch on this project.
+To https://pexcode.growipx.com/balasubramaniyan.d/testapiservice.git
+ ! [remote rejected] main -> main (pre-receive hook declined)
+error: failed to push some refs to 'https://pexcode.growipx.com/balasubramaniyan.d/testapiservice.git'
 balasubramaniyand@CHNIOPEXL5097:/opt/bala$ 
+
