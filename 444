@@ -1,12 +1,25 @@
+
 pipeline {
     agent any
-
+     parameters {
+       
+        choice (
+            choices:['10.20.245.106', ''],
+            description: 'IP Address to deploy',
+            name: 'IP_ADDRESS'
+        )
+        choice (
+            choices:[ 'root',''],
+            description: 'Username for SSH',
+            name: 'USERNAME'
+        )
+}
     stages {
         stage('SSH Connection') {
             steps {
                 script {
                     try {
-                        sh "ssh -p 7774 ${params.USERNAME}@${params.IP_ADDRESS} 'cd /opt/supportfirst/imapservice && nohup java -jar IMAPService-0.0.1-SNAPSHOT.war &'"
+                        sh "ssh -p 7774 ${params.USERNAME}@${params.IP_ADDRESS} 'cd /opt/supportfirst/imapservice && nohup java -jar IMAPService-0.0.1-SNAPSHOT.war &'&"
                         // Wait for the application to start (adjust sleep time as needed)
                         sleep time: 30
                     } catch (Exception e) {
