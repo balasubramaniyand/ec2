@@ -1,0 +1,6 @@
+balasubramaniyand@CHNIOPEXL5097:/opt/bala$ git add .
+fatal: detected dubious ownership in repository at '/opt/bala'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /opt/bala
+balasubramaniyand@CHNIOPEXL5097:/opt/bala$ 
