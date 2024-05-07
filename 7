@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Check if port 8090 is running
+netstat -tuln | grep ":8090" > /dev/null
+if [ $? -ne 0 ]; then
+    # Port 8090 is not running, send an email notification
+    SUBJECT="Port 8090 is not running"
+    TO="balasubramaniyan.d@iopex.gmail.com"
+    BODY="Port 8090 is not running. Please check."
+
+    echo "$BODY" | mail -s "$SUBJECT" "$TO"
+
+    if [ $? -eq 0 ]; then
+        echo "Email notification sent successfully."
+    else
+        echo "Failed to send email notification."
+    fi
+else
+    echo "Port 8090 is running."
+fi
