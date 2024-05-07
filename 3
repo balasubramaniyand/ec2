@@ -1,0 +1,14 @@
+balasubramaniyand@CHNIOPEXL5097:/opt$ sh -x bala.sh
++ netstat -tuln
++ grep :8090
++ [ 1 -ne 0 ]
++ SUBJECT=Port 8090 is not running
++ TO=balasubramaniyan.d@iopex.gmail.com
++ BODY=Port 8090 is not running. Please check.
++ echo Port 8090 is not running. Please check.
++ mail -s Port 8090 is not running balasubramaniyan.d@iopex.gmail.com
+mail: cannot send message: Process exited with a non-zero status
++ [ 1 -eq 0 ]
++ echo Failed to send email notification.
+Failed to send email notification.
+balasubramaniyand@CHNIOPEXL5097:/opt$ 
