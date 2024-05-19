@@ -1,0 +1,4 @@
+sudo scp p- 7774 home/balasubramaniyand/bala 10.20.245.99@balasubramaniyan.d:/home/balasubramaniyan.d
+ssh: Could not resolve hostname balasubramaniyan.d: Name or service not known
+lost connection
+balasubramaniyand@CHNIOPEXL5097:~$ 
